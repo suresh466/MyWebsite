@@ -2,4 +2,11 @@
     ViewData["Title"] = "Tutorial Page 2";
 }
 
-<p>This is the second tutorial page.</p>
+<div class="m-5">
+    <h2>Tutorial Page 2</h2>
+    <p>This is the second tutorial page. Continue providing information and instructions related to the tutorial.</p>
+    <div class="d-flex justify-content-between">
+        <a asp-area="Help" asp-controller="Tutorial" asp-action="Index" asp-route-id="1" class="btn btn-secondary">&laquo; Previous</a>
+        <a asp-area="Help" asp-controller="Tutorial" asp-action="Index" asp-route-id="3" class="btn btn-primary">Next &raquo;</a>
+    </div>
+</div>

@@ -1,16 +1,46 @@
 ﻿@{
     ViewData["Title"] = "Contact";
 }
-
 @section Heading {
-    <h1>Contact Us</h1>
+    <h1 class ="jumbotron display-4 text-center">Contact Us</h1>
 }
 
-
-<h2>Contact Information</h2>
-
-<div>
-    <p>Phone: @ViewBag.Contact["PhoneNumber"]</p>
-    <p>Email: <a href="mailto:@ViewBag.Contact["Email"]">@ViewBag.Contact["Email"]</a></p>
-    <p>Facebook: <a href="@ViewBag.Contact["FacebookUrl"]" target="_blank">@ViewBag.Contact["FacebookUrl"]</a></p>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Contact Information</h5>
+            </div>
+            <div class="card-body">
+                <p><strong>Phone:</strong> @ViewBag.Contact["PhoneNumber"]</p> <hr />
+                <p><strong>Email:</strong> <a class="text-info font-italic" href="mailto:@ViewBag.Contact["Email"]">@ViewBag.Contact["Email"]</a></p> <hr />
+                <p><strong>Facebook:</strong> <a class="text-info font-italic" href="@ViewBag.Contact["FacebookUrl"]" target="_blank">@ViewBag.Contact["FacebookUrl"]</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Send Us a Message</h5>
+            </div>
+            <div class="card-body">
+                @* dummy contact form just to fill up the page for better looks *@
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
