@@ -33,6 +33,14 @@ namespace MyWebsite.Controllers
         [Route("Home/Contact")]
         public IActionResult Contact()
         {
+            var contactInfo = new Dictionary<string, string>
+    {
+        {"PhoneNumber", "123-456-7890"},
+        {"Email", "contact1@mywebsite.com"},
+        {"FacebookUrl", "https://facebook.com/mywebsite"}
+    };
+
+            ViewBag.Contact = contactInfo;
             return View();
         }
 

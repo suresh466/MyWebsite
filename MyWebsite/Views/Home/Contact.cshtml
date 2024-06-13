@@ -1,12 +1,16 @@
 ﻿@{
-    ViewData["Title"] = "Contact Page";
+    ViewData["Title"] = "Contact";
 }
 
 @section Heading {
-        <h1>Contact Us</h1>
+    <h1>Contact Us</h1>
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<h2>Contact Information</h2>
+
+<div>
+    <p>Phone: @ViewBag.Contact["PhoneNumber"]</p>
+    <p>Email: <a href="mailto:@ViewBag.Contact["Email"]">@ViewBag.Contact["Email"]</a></p>
+    <p>Facebook: <a href="@ViewBag.Contact["FacebookUrl"]" target="_blank">@ViewBag.Contact["FacebookUrl"]</a></p>
 </div>
