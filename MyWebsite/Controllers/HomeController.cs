@@ -23,7 +23,15 @@ namespace MyWebsite.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpGet]
+        [Route("Home/About")]
+        public IActionResult About()
+        {
+            return View();
+        }
+        [HttpGet]
+        [Route("Home/Contact")]
+        public IActionResult Contact()
         {
             return View();
         }
