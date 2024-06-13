@@ -2,7 +2,7 @@
 
 namespace MyWebsite.Area.Help.Controllers
 {
-    [Area("Admin")]
+    [Area("Help")]
     public class HomeController : Controller
     {
         public IActionResult Index()
