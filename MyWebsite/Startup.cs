@@ -48,6 +48,13 @@ namespace MyWebsite
 
             app.UseEndpoints(endpoints =>
             {
+                // map route for Help area
+                endpoints.MapAreaControllerRoute(
+                    name: "help",
+                    areaName: "Help",
+                    pattern: "Help/{controller=Home}/{action=Index}/{id?}");
+
+                // default route
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
