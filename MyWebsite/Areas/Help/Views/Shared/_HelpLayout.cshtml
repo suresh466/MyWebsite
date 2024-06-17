@@ -1,10 +1,14 @@
-﻿@{
+﻿@* Help areas main layout inherits from the general main layout *@
+@{
     Layout = "/Views/Shared/_Layout.cshtml";
 }
+
+@* Fill the required subhead, so no need to fill it in other help pages *@
 @section Heading {
     <h1 class ="jumbotron display-4 text-center">Help Section</h1>
 }
 
+@* Help area specific navigation tabs *@
 <ul class="nav nav-tabs">
     <li class="nav-item">
         <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "Index" && ViewContext.RouteData.Values["Controller"]?.ToString() == "Home" ? "active" : "")" asp-area="Help" asp-controller="Home" asp-action="Index">Home</a>

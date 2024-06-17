@@ -23,6 +23,7 @@ namespace MyWebsite.Controllers
             return View();
         }
 
+        //Attribute based routing for the pages
         [HttpGet]
         [Route("Home/About")]
         public IActionResult About()
@@ -39,7 +40,7 @@ namespace MyWebsite.Controllers
         {"Email", "contact1@mywebsite.com"},
         {"FacebookUrl", "https://facebook.com/mywebsite"}
     };
-
+            //Sending a collection of contact information to the view
             ViewBag.Contact = contactInfo;
             return View();
         }
